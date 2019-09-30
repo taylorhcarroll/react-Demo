@@ -1,0 +1,70 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "url": "./Images/1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd",
+      "url": "./Images/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Esme",
+        "breed": "German Sheperd",
+        "url": "./Images/3.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Doctor",
+        "breed": "German Sheperd",
+        "url": "./Images/3.jpg"
+      },
+      {
+        "id": 5,
+        "name": "SillyBoi",
+        "breed": "German Sheperd",
+        "url": "./Images/1.jpg"
+      }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "scruffy",
+      "employeeOftheMonth": true
+    },
+    {
+      "id": 2,
+      "name": "scrubby",
+      "employeeOftheMonth": false
+    },
+    {
+      "id": 3,
+      "name": "bubby",
+      "employeeOftheMonth": false
+    },
+    {
+      "id": 4,
+      "name": "mopper",
+      "employeeOftheMonth": false
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Mr. Doge",
+      "salary": "60 pets, 2 good boys and 12 dog snacks a day",
+      "motto": "Woof WOOF!"
+    },
+    {
+      "id": 1,
+      "name": "Mr. Doge",
+      "salary": "60 pets, 2 good boys and 12 dog snacks a day",
+      "motto": "Bork bork, bork Bork bork!"
+    }
+  ]
+}
