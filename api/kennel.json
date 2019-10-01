@@ -1,56 +1,54 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "url": "./Images/1.jpg"
-    },
-    {
       "id": 2,
       "name": "Decker",
       "breed": "German Sheperd",
       "url": "./Images/2.jpg"
     },
     {
-        "id": 3,
-        "name": "Esme",
-        "breed": "German Sheperd",
-        "url": "./Images/3.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Doctor",
-        "breed": "German Sheperd",
-        "url": "./Images/3.jpg"
-      },
-      {
-        "id": 5,
-        "name": "SillyBoi",
-        "breed": "German Sheperd",
-        "url": "./Images/1.jpg"
-      }
+      "id": 3,
+      "name": "Esme",
+      "breed": "German Sheperd",
+      "url": "./Images/3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Doctor",
+      "breed": "German Sheperd",
+      "url": "./Images/3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "SillyBoi",
+      "breed": "German Sheperd",
+      "url": "./Images/1.jpg"
+    },
+    {
+      "name": "test",
+      "breed": "test",
+      "url": "./Images/1.jpg",
+      "id": 6
+    }
   ],
   "employees": [
     {
       "id": 1,
       "name": "scruffy",
-      "employeeOftheMonth": true
+      "employeeOftheMonth": true,
+      "url": "./Images/employee1.jpg"
     },
     {
       "id": 2,
       "name": "scrubby",
-      "employeeOftheMonth": false
+      "employeeOftheMonth": false,
+      "url": "./Images/employee2.jpg"
     },
     {
       "id": 3,
       "name": "bubby",
-      "employeeOftheMonth": false
-    },
-    {
-      "id": 4,
-      "name": "mopper",
-      "employeeOftheMonth": false
+      "employeeOftheMonth": false,
+      "url": "./Images/employee3.jpg"
     }
   ],
   "owners": [
@@ -58,13 +56,29 @@
       "id": 1,
       "name": "Mr. Doge",
       "salary": "60 pets, 2 good boys and 12 dog snacks a day",
-      "motto": "Woof WOOF!"
+      "motto": "Woof WOOF!",
+      "url": "./Images/owner.jpg"
     },
     {
-      "id": 1,
-      "name": "Mr. Doge",
+      "id": 2,
+      "name": "Sage",
       "salary": "60 pets, 2 good boys and 12 dog snacks a day",
-      "motto": "Bork bork, bork Bork bork!"
+      "motto": "Bork bork, bork Bork bork!",
+      "url": "./Images/owner2.jpg"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Pet Cemetary",
+      "location": "500 puppy way",
+      "capacity": "60 pets"
+    },
+    {
+      "id": 2,
+      "name": "Sage's Herpetology Emporium",
+      "location": "611 derp way",
+      "capacity": "180 pets"
     }
   ]
 }
