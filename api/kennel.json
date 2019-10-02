@@ -33,18 +33,6 @@
   ],
   "employees": [
     {
-      "id": 1,
-      "name": "scruffy",
-      "employeeOftheMonth": "false",
-      "url": "employee1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "scrubby",
-      "employeeOftheMonth": "false",
-      "url": "employee2.jpg"
-    },
-    {
       "id": 3,
       "name": "bubby",
       "employeeOftheMonth": "false",
@@ -67,6 +55,18 @@
       "name": "mopper",
       "employeeOftheMonth": "true",
       "url": "employee1.jpg"
+    },
+    {
+      "name": "Scruffy",
+      "employeeOftheMonth": "false",
+      "url": "employee1.jpg",
+      "id": 7
+    },
+    {
+      "name": "Scrubby",
+      "employeeOftheMonth": "false",
+      "url": "employee2.jpg",
+      "id": 8
     }
   ],
   "owners": [
