@@ -4,6 +4,7 @@ import Home from './home/Home'
 import OwnerList from './Owner/OwnerList'
 import AnimalList from './animal/AnimalList'
 import AnimalForm from './animal/AnimalForm'
+import AnimalEditForm from './animal/AnimalEditForm'
 import EmployeeList from './Employee/EmployeeList'
 import AnimalDetail from './animal/AnimalDetail'
 import LocationList from './Location/LocationList'
@@ -29,7 +30,7 @@ class ApplicationViews extends Component {
             return <Redirect to="/login" />
           }
         }} />
-        <Route path="/animals/:animalId(\d+)" render={(props) => {
+        <Route exact path="/animals/:animalId(\d+)" render={(props) => {
           if (this.isAuthenticated()) {
             // Pass the animalId to the AnimalDetailComponent//
             return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
@@ -40,6 +41,13 @@ class ApplicationViews extends Component {
         <Route path="/animals/new" render={(props) => {
           if (this.isAuthenticated()) {
             return <AnimalForm {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
+        }} />
+        <Route path="/animals/:animalId(\d+)/edit" render={props => {
+          if (this.isAuthenticated()) {
+            return <AnimalEditForm {...props} />
           } else {
             return <Redirect to="/login" />
           }

@@ -20,6 +20,7 @@ class AnimalCard extends Component {
           {/* another way to write this: */}
           {/* <img src={require(`./Images/${this.props.animal.id}.jpg`)} alt="My Dog" /> */}
           <Link to={`/animals/${this.props.animal.id}`}><button>Details</button></Link>
+          <button type="button" onClick={() => {this.props.history.push(`/animals/${this.props.animal.id}/edit`)}}>Edit</button>
           <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>
           <button type="button" onClick={this.myScopedFunction}>ConsoleLogButton</button>
         </div>

@@ -2,14 +2,14 @@
   "animals": [
     {
       "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd",
-      "url": "2.jpg"
+      "name": "Billy Dee Williams",
+      "breed": "rebel scum",
+      "url": "1.jpg"
     },
     {
       "id": 3,
-      "name": "Esme",
-      "breed": "German Sheperd",
+      "name": "Esmereldo",
+      "breed": "German Sheppo",
       "url": "3.jpg"
     },
     {

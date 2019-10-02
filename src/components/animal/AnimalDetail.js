@@ -42,8 +42,8 @@ class AnimalDetail extends Component {
 }
 
   render() {
-    //this statement is added to the render to prevent//
-    //the method from exploding when it doesn't have the animal url yet, the state starts with ""//
+    /*this statement is added to the render to prevent
+    the method from exploding when it doesn't have the animal url yet, the state starts with "" */
     if (this.state.loadingStatus) {
       return <p>Loading...</p>
       //line below checks if loadingStatus is finished and if the isAnimalValid has been set to true//

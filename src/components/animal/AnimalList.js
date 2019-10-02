@@ -37,7 +37,8 @@ render(){
             <AnimalCard
                         key={animal.id}
                         animal={animal}
-                        deleteAnimal={this.deleteAnimal}/>)}
+                        deleteAnimal={this.deleteAnimal}
+                        {...this.props}/>)}
         </div>
         </>
     )
