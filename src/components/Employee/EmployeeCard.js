@@ -10,8 +10,9 @@ class EmployeeCard extends Component {
           </picture>
           <h3>Name: <span className="card-Employeename">{this.props.employee.name}</span></h3>
           {
-            this.props.employee.employeeOftheMonth === true ? <p>Employee Of the Month, Good Boy {this.props.employee.name}!</p> : ""
+            this.props.employee.employeeOftheMonth === "true" ? <p>Employee Of the Month, Good job {this.props.employee.name}!</p> : ""
           }
+          <button type="button" onClick={() => {this.props.history.push(`/employee/${this.props.employee.id}/edit`)}}>Edit</button>
         <button type="button" onClick={() => this.props.deleteEmployee(this.props.employee.id)}>You're Fired!</button>
         </div>
       </div>

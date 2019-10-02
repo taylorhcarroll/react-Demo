@@ -2,9 +2,9 @@
   "animals": [
     {
       "id": 2,
-      "name": "Billy Dee Williams",
-      "breed": "rebel scum",
-      "url": "1.jpg"
+      "name": "scrubs",
+      "breed": "Employee of the Month",
+      "url": "3.jpg"
     },
     {
       "id": 3,
@@ -35,26 +35,38 @@
     {
       "id": 1,
       "name": "scruffy",
-      "employeeOftheMonth": true,
+      "employeeOftheMonth": "false",
       "url": "employee1.jpg"
     },
     {
       "id": 2,
       "name": "scrubby",
-      "employeeOftheMonth": false,
+      "employeeOftheMonth": "false",
       "url": "employee2.jpg"
     },
     {
       "id": 3,
       "name": "bubby",
-      "employeeOftheMonth": false,
+      "employeeOftheMonth": "false",
       "url": "employee3.jpg"
     },
     {
       "id": 4,
       "name": "Keaton",
-      "employeeOftheMonth": false,
+      "employeeOftheMonth": "true",
       "url": "employee4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Heidi",
+      "employeeOftheMonth": "true",
+      "url": "employee5.JPG"
+    },
+    {
+      "id": 6,
+      "name": "mopper",
+      "employeeOftheMonth": "true",
+      "url": "employee1.jpg"
     }
   ],
   "owners": [

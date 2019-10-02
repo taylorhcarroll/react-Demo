@@ -6,6 +6,8 @@ import AnimalList from './animal/AnimalList'
 import AnimalForm from './animal/AnimalForm'
 import AnimalEditForm from './animal/AnimalEditForm'
 import EmployeeList from './Employee/EmployeeList'
+import EmployeeForm from './Employee/EmployeeForm'
+import EmployeeEditForm from './Employee/EmployeeEditForm'
 import AnimalDetail from './animal/AnimalDetail'
 import LocationList from './Location/LocationList'
 import Login from './auth/Login'
@@ -52,9 +54,23 @@ class ApplicationViews extends Component {
             return <Redirect to="/login" />
           }
         }} />
-        <Route path="/employee" render={(props) => {
+        <Route exact path="/employee" render={(props) => {
           if (this.isAuthenticated()) {
-            return <EmployeeList />
+            return <EmployeeList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
+        }} />
+         <Route path="/employee/new" render={(props) => {
+          if (this.isAuthenticated()) {
+            return <EmployeeForm {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
+        }} />
+        <Route exact path="/employee/:employeeId(\d+)/edit" render={props => {
+          if (this.isAuthenticated()) {
+            return <EmployeeEditForm {...props} />
           } else {
             return <Redirect to="/login" />
           }
