@@ -10,6 +10,7 @@ class AnimalDetail extends Component {
       breed: "",
       url: "",
       loadingStatus: true,
+      //sets this variable to false on first load, this will help us check if it's a valid animal
       isAnimalValid: false
 
   }
@@ -19,6 +20,7 @@ class AnimalDetail extends Component {
     //get(id) from AnimalManager and hang on to the data; put it into state
     AnimalManager.get(this.props.animalId)
     .then((animal) => {
+      //if the name of the animal exist, set isAnimalValid to true//
       if (animal.name) {
         var isAnimalValid = true;
       }
@@ -44,6 +46,7 @@ class AnimalDetail extends Component {
     //the method from exploding when it doesn't have the animal url yet, the state starts with ""//
     if (this.state.loadingStatus) {
       return <p>Loading...</p>
+      //line below checks if loadingStatus is finished and if the isAnimalValid has been set to true//
     } if (!this.state.loadingStatus && this.state.isAnimalValid) {
     return (
       <div className="card">
@@ -59,6 +62,7 @@ class AnimalDetail extends Component {
       </div>
     );
   } else {
+    //redirects back to the animals page if no Id//
     return <Redirect to="/animals"/>
   }
   }}
