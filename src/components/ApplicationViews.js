@@ -24,23 +24,39 @@ class ApplicationViews extends Component {
         {/* added "exact" to the path because we now have Animal Details */}
         <Route exact path="/animals" render={props => {
           if (this.isAuthenticated()) {
-              return <AnimalList {...props} />
+            return <AnimalList {...props} />
           } else {
-              return <Redirect to="/login" />
+            return <Redirect to="/login" />
           }
         }} />
         <Route path="/animals/:animalId(\d+)" render={(props) => {
-        // Pass the animalId to the AnimalDetailComponent//
-          return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props}/>
+          if (this.isAuthenticated()) {
+            // Pass the animalId to the AnimalDetailComponent//
+            return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route path="/animals/new" render={(props) => {
-          return <AnimalForm {...props} />
+          if (this.isAuthenticated()) {
+            return <AnimalForm {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route path="/employee" render={(props) => {
-          return <EmployeeList />
+          if (this.isAuthenticated()) {
+            return <EmployeeList />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route path="/Owner" render={(props) => {
-          return <OwnerList />
+          if (this.isAuthenticated()) {
+            return <OwnerList />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route exact path="/Location" render={(props) => {
           return <LocationList />

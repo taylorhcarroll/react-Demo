@@ -29,8 +29,8 @@ class Login extends Component {
             password: this.state.password
         })
     )
-    //this line takes you to the animals page after login.
-    this.props.history.push("/animals");
+    //this line takes you to the home page after login.
+    this.props.history.push("/home");
 
   }
 

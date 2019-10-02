@@ -4,30 +4,30 @@
       "id": 2,
       "name": "Decker",
       "breed": "German Sheperd",
-      "url": "./Images/2.jpg"
+      "url": "2.jpg"
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "German Sheperd",
-      "url": "./Images/3.jpg"
+      "url": "3.jpg"
     },
     {
       "id": 4,
       "name": "Doctor",
       "breed": "German Sheperd",
-      "url": "./Images/3.jpg"
+      "url": "3.jpg"
     },
     {
       "id": 5,
       "name": "SillyBoi",
       "breed": "German Sheperd",
-      "url": "./Images/1.jpg"
+      "url": "1.jpg"
     },
     {
       "name": "test",
       "breed": "test",
-      "url": "./Images/1.jpg",
+      "url": "1.jpg",
       "id": 6
     }
   ],

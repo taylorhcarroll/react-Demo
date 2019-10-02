@@ -7,6 +7,7 @@ class AnimalDetail extends Component {
   state = {
       name: "",
       breed: "",
+      url: "",
       loadingStatus: true
   }
 
@@ -18,6 +19,7 @@ class AnimalDetail extends Component {
       this.setState({
         name: animal.name,
         breed: animal.breed,
+        url: animal.url,
         loadingStatus: false
       });
     });
@@ -31,14 +33,19 @@ class AnimalDetail extends Component {
 }
 
   render() {
+    //this statement is added to the render to prevent//
+    //the method from exploding when it doesn't have the animal url yet, the state starts with ""//
+    if (this.state.loadingStatus) {
+      return <p>Loading...</p>
+    }
     return (
       <div className="card">
         <div className="card-content">
           <picture>
             <img src={require('./dog.svg')} alt="My Dog" />
+            <img src={require(`./Images/${this.state.url}`)} alt="My Dog" />
           </picture>
             <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
-              {this.state.url}
             <p>Breed: {this.state.breed}</p>
             <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
         </div>
