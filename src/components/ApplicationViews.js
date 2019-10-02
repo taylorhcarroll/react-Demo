@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
 import OwnerList from './Owner/OwnerList'
@@ -7,9 +7,13 @@ import AnimalForm from './animal/AnimalForm'
 import EmployeeList from './Employee/EmployeeList'
 import AnimalDetail from './animal/AnimalDetail'
 import LocationList from './Location/LocationList'
+import Login from './auth/Login'
+import { Route, withRouter, Redirect } from "react-router-dom"
 
 
 class ApplicationViews extends Component {
+
+  isAuthenticated = () => localStorage.getItem("credentials") !== null
 
   render() {
     return (
@@ -18,8 +22,12 @@ class ApplicationViews extends Component {
           return <Home />
         }} />
         {/* added "exact" to the path because we now have Animal Details */}
-        <Route exact path="/animals" render={(props) => {
-          return <AnimalList {...props} />
+        <Route exact path="/animals" render={props => {
+          if (this.isAuthenticated()) {
+              return <AnimalList {...props} />
+          } else {
+              return <Redirect to="/login" />
+          }
         }} />
         <Route path="/animals/:animalId(\d+)" render={(props) => {
         // Pass the animalId to the AnimalDetailComponent//
@@ -37,6 +45,7 @@ class ApplicationViews extends Component {
         <Route exact path="/Location" render={(props) => {
           return <LocationList />
         }} />
+        <Route path="/login" component={Login} />
       </React.Fragment>
     )
   }

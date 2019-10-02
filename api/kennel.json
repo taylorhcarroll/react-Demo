@@ -49,6 +49,12 @@
       "name": "bubby",
       "employeeOftheMonth": false,
       "url": "./Images/employee3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Keaton",
+      "employeeOftheMonth": false,
+      "url": "./Images/employee4.jpg"
     }
   ],
   "owners": [

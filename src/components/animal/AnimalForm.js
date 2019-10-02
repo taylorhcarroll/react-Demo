@@ -65,6 +65,7 @@ class AnimalForm extends Component {
                         id="url"
                         placeholder="Animal Url"
                         />
+                        <label htmlFor="url">URL</label>
                     </div>
                     <div className="alignRight">
                         <button
