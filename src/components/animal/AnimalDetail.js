@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
 import './AnimalDetail.css'
+import { Route, withRouter, Redirect } from "react-router-dom"
 
 class AnimalDetail extends Component {
 
@@ -8,7 +9,9 @@ class AnimalDetail extends Component {
       name: "",
       breed: "",
       url: "",
-      loadingStatus: true
+      loadingStatus: true,
+      isAnimalValid: false
+
   }
 
   componentDidMount(){
@@ -16,11 +19,15 @@ class AnimalDetail extends Component {
     //get(id) from AnimalManager and hang on to the data; put it into state
     AnimalManager.get(this.props.animalId)
     .then((animal) => {
+      if (animal.name) {
+        var isAnimalValid = true;
+      }
       this.setState({
         name: animal.name,
         breed: animal.breed,
         url: animal.url,
-        loadingStatus: false
+        loadingStatus: false,
+        isAnimalValid: isAnimalValid
       });
     });
   }
@@ -37,7 +44,7 @@ class AnimalDetail extends Component {
     //the method from exploding when it doesn't have the animal url yet, the state starts with ""//
     if (this.state.loadingStatus) {
       return <p>Loading...</p>
-    }
+    } if (!this.state.loadingStatus && this.state.isAnimalValid) {
     return (
       <div className="card">
         <div className="card-content">
@@ -51,7 +58,9 @@ class AnimalDetail extends Component {
         </div>
       </div>
     );
+  } else {
+    return <Redirect to="/animals"/>
   }
-}
+  }}
 
 export default AnimalDetail;

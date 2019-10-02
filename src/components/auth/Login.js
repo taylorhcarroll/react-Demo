@@ -29,8 +29,8 @@ class Login extends Component {
             password: this.state.password
         })
     )
-    //this line takes you to the home page after login.
-    this.props.history.push("/home");
+    //this line takes you to the home page after login. you can add another route after the ".push(/)"
+    this.props.history.push("/");
 
   }
 

@@ -58,6 +58,7 @@ class AnimalForm extends Component {
                         placeholder="Breed"
                         />
                         <label htmlFor="breed">Breed</label>
+                        {/* where the input for URL starts */}
                         <input
                         type="text"
                         required
@@ -66,6 +67,7 @@ class AnimalForm extends Component {
                         placeholder="Animal Url"
                         />
                         <label htmlFor="url">URL</label>
+                        {/* where the input for URL ends */}
                     </div>
                     <div className="alignRight">
                         <button

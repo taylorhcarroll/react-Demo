@@ -36,25 +36,25 @@
       "id": 1,
       "name": "scruffy",
       "employeeOftheMonth": true,
-      "url": "./Images/employee1.jpg"
+      "url": "employee1.jpg"
     },
     {
       "id": 2,
       "name": "scrubby",
       "employeeOftheMonth": false,
-      "url": "./Images/employee2.jpg"
+      "url": "employee2.jpg"
     },
     {
       "id": 3,
       "name": "bubby",
       "employeeOftheMonth": false,
-      "url": "./Images/employee3.jpg"
+      "url": "employee3.jpg"
     },
     {
       "id": 4,
       "name": "Keaton",
       "employeeOftheMonth": false,
-      "url": "./Images/employee4.jpg"
+      "url": "employee4.jpg"
     }
   ],
   "owners": [
@@ -63,14 +63,14 @@
       "name": "Mr. Doge",
       "salary": "60 pets, 2 good boys and 12 dog snacks a day",
       "motto": "Woof WOOF!",
-      "url": "./Images/owner.jpg"
+      "url": "owner.jpg"
     },
     {
       "id": 2,
       "name": "Sage",
       "salary": "60 pets, 2 good boys and 12 dog snacks a day",
       "motto": "Bork bork, bork Bork bork!",
-      "url": "./Images/owner2.jpg"
+      "url": "owner2.jpg"
     }
   ],
   "locations": [
