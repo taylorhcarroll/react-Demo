@@ -25,10 +25,10 @@
       "url": "1.jpg"
     },
     {
+      "id": 6,
       "name": "test",
       "breed": "test",
-      "url": "1.jpg",
-      "id": 6
+      "url": "2.jpg"
     }
   ],
   "employees": [

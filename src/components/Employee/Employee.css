@@ -6,7 +6,19 @@
     0% { transform:  rotate(0deg);}
     100% { transform:  rotate(360deg);}
   }
+/* @keyframes spinColor {
+    0% {filter: hue-rotate(0deg) opacity(1); height: 300px; width: auto;}
+    100% {filter: hue-rotate(360deg) opacity(0); height: 10px; width: auto;}
+  } */
+/* @keyframes spinKeaton {
+    0% { transform:  rotate(0deg);}
+    100% { transform:  rotate(360deg);}
+  }
 @keyframes spinColor {
     0% {filter: hue-rotate(0deg) opacity(1); height: 300px; width: auto;}
     100% {filter: hue-rotate(360deg) opacity(0); height: 10px; width: auto;}
-  }
+  } */
+
+.EmployeeOfTheMonth {
+    color: red;
+}
