@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import './Animal.css'
 import { Link } from "react-router-dom";
 import { firstLetterCase } from '../../modules/helpers'
+import AnimalManager from '../../modules/AnimalManager';
 
 class AnimalCard extends Component {
     myScopedFunction = () => {
         console.log("Hello World")
+    }
+    handleDelete = id => {
+      AnimalManager.delete(id).then(() => this.props.getData())
     }
   render() {
     return (
@@ -21,7 +25,7 @@ class AnimalCard extends Component {
           {/* <img src={require(`./Images/${this.props.animal.id}.jpg`)} alt="My Dog" /> */}
           <Link to={`/animals/${this.props.animal.id}`}><button>Details</button></Link>
           <button type="button" onClick={() => {this.props.history.push(`/animals/${this.props.animal.id}/edit`)}}>Edit</button>
-          <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>
+          <button type="button" onClick={() => this.handleDelete(this.props.animal.id)}>Discharge</button>
           <button type="button" onClick={this.myScopedFunction}>ConsoleLogButton</button>
         </div>
       </div>

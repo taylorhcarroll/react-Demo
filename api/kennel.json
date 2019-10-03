@@ -27,20 +27,6 @@
       "breed": "test",
       "employeeId": 4,
       "url": "1.jpg"
-    },
-    {
-      "id": 9,
-      "name": "test",
-      "breed": "test",
-      "employeeId": 4,
-      "url": "1.jpg"
-    },
-    {
-      "id": 10,
-      "name": "test",
-      "breed": "test",
-      "url": "2.jpg",
-      "employeeId": 4
     }
   ],
   "employees": [

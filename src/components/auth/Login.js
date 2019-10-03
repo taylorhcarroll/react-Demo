@@ -17,21 +17,10 @@ class Login extends Component {
 
   handleLogin = (e) => {
     e.preventDefault()
-    /*
-        For now, just store the email and password that
-        the customer enters into local storage. If this went out to a database,
-        you would need a .then statement after the return from the API fetch call.
-    */
-    localStorage.setItem(
-        "credentials",
-        JSON.stringify({
-            email: this.state.email,
-            password: this.state.password
-        })
-    )
+        let credentials = {email: this.state.email, password: this.state.password}
+        this.props.setUser(credentials);
+        this.props.history.push("/");
     //this line takes you to the home page after login. you can add another route after the ".push(/)"
-    this.props.history.push("/");
-
   }
 
   render() {
