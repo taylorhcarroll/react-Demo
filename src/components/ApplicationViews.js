@@ -13,8 +13,9 @@ import AnimalDetail from './animal/AnimalDetail'
 import LocationList from './Location/LocationList'
 import Login from './auth/Login'
 import { Route, withRouter, Redirect } from "react-router-dom"
+import EmployeeWithAnimals from './Employee/EmployeeWithAnimals'
 
-
+//ApplicationViews merely listens for the route, the buttons are what tell the browser where the user wants to go//
 class ApplicationViews extends Component {
 
   isAuthenticated = () => localStorage.getItem("credentials") !== null
@@ -62,10 +63,10 @@ class ApplicationViews extends Component {
             return <Redirect to="/login" />
           }
         }} />
-        <Route exact path="/employee/:employeeId(\d+)" render={(props) => {
+        <Route exact path="/employee/:employeeId(\d+)/details" render={(props) => {
           if (this.isAuthenticated()) {
-            // Pass the animalId to the AnimalDetailComponent//
-            return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} {...props} />
+            // Pass the animalId to the EmployeeDetailComponent//
+            return <EmployeeWithAnimals employeeId={parseInt(props.match.params.employeeId)} {...props} />
           } else {
             return <Redirect to="/login" />
           }

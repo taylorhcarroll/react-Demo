@@ -14,7 +14,9 @@ class EmployeeCard extends Component {
           {
             this.props.employee.employeeOftheMonth === "true" ? <p>Employee Of the Month, Good job {this.props.employee.name}!</p> : ""
           }
-          <Link to={`/employee/${this.props.employee.id}`}><button>Details</button></Link>
+          {/* <Link to={`/employee/${this.props.employee.id}`}><button>Details</button></Link> */}
+          <button type="button"
+        onClick={() => { this.props.history.push(`/employee/${this.props.employee.id}/details`) }}>Details</button>
           <button type="button" onClick={() => {this.props.history.push(`/employee/${this.props.employee.id}/edit`)}}>Edit</button>
         <button type="button" onClick={() => this.props.deleteEmployee(this.props.employee.id)}>You're Fired!</button>
         </div>

@@ -4,31 +4,36 @@
       "id": 2,
       "name": "scrubs",
       "breed": "Employee of the Month",
-      "url": "3.jpg"
+      "url": "3.jpg",
+      "employeeId": 3
     },
     {
       "id": 3,
-      "name": "Esmereldo",
-      "breed": "German Sheppo",
+      "name": "Esmereldog",
+      "breed": "German Sheppi",
+      "employeeId": "4",
       "url": "3.jpg"
     },
     {
       "id": 4,
       "name": "Doctor",
       "breed": "German Sheperd",
-      "url": "3.jpg"
+      "url": "3.jpg",
+      "employeeId": 3
     },
     {
       "id": 5,
       "name": "SillyBoi",
       "breed": "German Sheperd",
-      "url": "1.jpg"
+      "url": "1.jpg",
+      "employeeId": 2
     },
     {
       "id": 6,
       "name": "test",
       "breed": "test",
-      "url": "2.jpg"
+      "url": "2.jpg",
+      "employeeId": 4
     }
   ],
   "employees": [
