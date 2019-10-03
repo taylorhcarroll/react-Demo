@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import EmployeeManager from '../../modules/EmployeeManager'
 import AnimalCard from '../animal/AnimalCard'
+import AnimalManager from '../../modules/AnimalManager'
 
 class EmployeeWithAnimals extends Component {
     state = {
       employee: {},
       animals: []
     }
-
+    deleteAnimal = id => {
+        AnimalManager.delete(id)
+        .then(() => {
+          this.componentDidMount();
+        })
+      }
     componentDidMount(){
         //got here now make call to get employee with animal
         EmployeeManager.getWithAnimals(this.props.match.params.employeeId)
@@ -27,6 +33,7 @@ class EmployeeWithAnimals extends Component {
               <AnimalCard
                 key={animal.id}
                 animal={animal}
+                deleteAnimal={this.deleteAnimal}
                 {...this.props}
               />
             )}

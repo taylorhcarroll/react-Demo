@@ -27,10 +27,10 @@ class AnimalEditForm extends Component {
             id: this.props.match.params.animalId,
             name: this.state.animalName,
             breed: this.state.breed,
-            employeeId: this.state.employeeId,
+            employeeId: parseInt(this.state.employeeId),
             url: this.state.url
         };
-
+        console.log(editedAnimal)
         AnimalManager.update(editedAnimal)
             .then(() => this.props.history.push("/animals"))
     }
